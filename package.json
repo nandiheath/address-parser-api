@@ -1,0 +1,29 @@
+{
+  "name": "address-parser-api",
+  "version": "1.0.0",
+  "description": "Serving endpoints for address parser",
+  "main": "index.js",
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "bluebird": "^3.5.3",
+    "hk-address-parser-lib": "^0.2.3",
+    "proj4": "^2.5.0",
+    "request": "^2.88.0",
+    "restify": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod": "NODE_ENV=production node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandiheath/address-parser-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nandiheath/address-parser-api/issues"
+  },
+  "homepage": "https://github.com/nandiheath/address-parser-api#readme"
+}
