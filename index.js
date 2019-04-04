@@ -79,27 +79,12 @@ server.on('restifyError', (req, res, err, callback) => {
  * @api {get} /search Search the address
  * @apiName Search
  * @apiVersion  1.0.0
- * @apiHeader (AuthHeader) {String} Content-Type application/json
- * @apiParam {string} address
- * @apiParam {string="zh_hk","en_us"} lang
- * @apiSuccessExample {type} Success-Response:
- * {
- *     success: true,
- *     data: {
- *        search_string: String,
- *        results: [{
- *            full_address: String,
- *            coordinate: {
- *              lat: Number,
- *              lng: Number,
- *            },
- *            data_source: String,
- *            elements: {
- *                [key?]: String
- *            }
-*         }]
- *      }
- * }
+ * @apiHeader (Session) {String} auth-account-id Logged in User's Id
+ * @apiHeader {String} authorization Logged in User's Id
+ * @apiSuccess {String} data.search_string name of the user
+ * @apiSuccess {String} data.results the result set
+ * @apiParam {String="zh_hk", "en_us"} lang the language for the results
+ * @apiParam {String} address the address to lookup
  */
 server.get('/search', asyncMiddleware(searchAddress));
 
