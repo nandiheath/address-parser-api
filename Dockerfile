@@ -19,7 +19,7 @@ COPY --from=builder /build .
 COPY . .
 
 # Kintohub Static Website
-FROM alpine:3 AS release
+FROM node:12-alpine AS release
 
 ENV PORT 3000
 
