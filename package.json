@@ -9,12 +9,13 @@
     "hk-address-parser-lib": "^0.2.3",
     "proj4": "^2.5.0",
     "request": "^2.88.0",
-    "restify": "^8.2.0"
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "NODE_ENV=production node index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
