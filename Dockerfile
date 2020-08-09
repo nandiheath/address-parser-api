@@ -18,8 +18,6 @@ COPY --from=builder /build .
 
 COPY . .
 
-RUN yarn build
-
 # Kintohub Static Website
 FROM alpine:3 AS release
 
